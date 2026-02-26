@@ -13,11 +13,6 @@ testing*
 gwpop/
 *.excalidraw
 
-# ignore dat files in the main directory
-*.dat
-*.txt
-*.pdf
-
 # but include psds txt files
 !Tutorials_ACME/psds/*.txt
 
@@ -50,3 +45,4 @@ __pycache__/*
 job_configs
 
 |Tutorials_ACME/simulated_catalogue.csv
+|requirements.txt
