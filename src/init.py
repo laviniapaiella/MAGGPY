@@ -307,6 +307,12 @@ def initialize_simulation(
         default_interpolator (Interps): Interpolator containing integrals and scaling functions.
         data_dict (Dict[str, np.ndarray]): Dictionary of observable data.
     """
+    # check if theta_c or theta_v_max exist if it is inside use that otherwise default to 20 max and 3.4 for theta_c
+    if "theta_c" not in params:
+        params["theta_c"] = 3.4
+    if "theta_v_max" not in params:
+        params["theta_v_max"] = 20.0
+
     rng = np.random.default_rng(SEED)
 
     deg_to_rad = np.pi / 180
